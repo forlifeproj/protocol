@@ -23,6 +23,7 @@ type QueryOrderStatusRsp struct {
 }
 
 type OrderInfo struct {
+	OrderId string `json:"orderId"`
 }
 
 // 拉取订单列表
