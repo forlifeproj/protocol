@@ -6,10 +6,11 @@ const (
 
 // 登录请求
 type GetUidReq struct {
-	Appid    int    `json:"appid"`
-	OpenType int    `json:"open_type"`
-	OpenId   string `json:"openid"`
-	UnionId  string `json:"unionid"`
+	Appid        int    `json:"appid"`
+	OpenType     int    `json:"open_type"`
+	OpenId       string `json:"openid"`
+	UnionId      string `json:"unionid"`
+	AutoRegister int    `json:"auto_register"`
 }
 
 type GetUidRsp struct {
