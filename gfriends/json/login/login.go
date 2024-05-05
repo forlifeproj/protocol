@@ -1,8 +1,19 @@
 package login
 
-//登录请求
+const (
+	WEIXIN_LOGIN_TYPE = 1
+)
+
+// 登录请求
 type LoginReq struct {
-	Token string `json:"token"`
+	Appid     int    `json:"appid"`
+	Token     string `json:"token"`
+	LoginType int    `json:"login_type"`
 }
 
-
+type LoginRsp struct {
+	Code        int    `json:"errcode"`
+	ErrMsg      string `json:"errmsg"`
+	Ticket      string `json:"ticket"`
+	RegisterUid int64  `json:"uid"`
+}
