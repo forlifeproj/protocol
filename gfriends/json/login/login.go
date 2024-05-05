@@ -15,5 +15,6 @@ type LoginRsp struct {
 	Code        int    `json:"errcode"`
 	ErrMsg      string `json:"errmsg"`
 	Ticket      string `json:"ticket"`
+	Openid      string `json:"openid"`
 	RegisterUid int64  `json:"uid"`
 }
