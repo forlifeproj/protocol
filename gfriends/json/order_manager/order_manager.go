@@ -39,13 +39,18 @@ type GetOrderListRsp struct {
 	OrderList   []OrderInfo `json:"orderList"`
 }
 
-type GetGroupListReq struct {
-}
-
-type GetGroupListRsp struct {
+// 群信息
+type GroupInfo struct {
 	GroupId      string `json:"group_id"`      // 群id
 	GroupName    string `json:"group_name"`    // 群名称
 	GroupAvatar  string `json:"group_avatar"`  // 头像
 	GroupQRCode  string `json:"group_qr_code"` // 群二维码链接
 	GroupMembers int32  `json:"group_members"` // 群成员数量
+}
+
+type GetGroupListReq struct {
+}
+
+type GetGroupListRsp struct {
+	GroupList []GroupInfo `json:"group_list"` // 群列表
 }
