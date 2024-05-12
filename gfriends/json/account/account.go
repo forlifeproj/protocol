@@ -4,7 +4,11 @@ const (
 	WEIXIN_OPEN_TYPE = 1
 )
 
-// 登录请求
+const (
+	GetUidServiceName = "gfriends.account.GetUid"
+)
+
+// 登录注册getuid请求
 type GetUidReq struct {
 	Appid        int    `json:"appid"`
 	OpenType     int    `json:"open_type"`
