@@ -24,6 +24,7 @@ type LoginRsp struct {
 	RegisterUid int64  `json:"uid"`
 }
 
+// 登录鉴权
 type LoginAuthReq struct {
 	Appid       int    `json:"appid"`
 	Token       string `json:"token"`
