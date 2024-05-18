@@ -10,16 +10,6 @@ type Resource struct {
 	Nonce          string `json:"nonce"`
 }
 
-// callback event结构
-type Event struct {
-	ID           string    `json:"id"`
-	CreateTime   time.Time `json:"create_time"`
-	ResourceType string    `json:"resource_type"`
-	EventType    string    `json:"event_type"`
-	Summary      string    `json:"summary"`
-	Resource     Resource  `json:"resource"`
-}
-
 type Amount struct {
 	PayerTotal    int    `json:"payer_total"`
 	Total         int    `json:"total"`
@@ -72,4 +62,18 @@ type Transaction struct {
 	TradeType       string            `json:"trade_type"`
 	Attach          string            `json:"attach"`
 	SceneInfo       SceneInfo         `json:"scene_info"`
+}
+
+type WxPayCallbackReq struct {
+	ID           string    `json:"id"`
+	CreateTime   time.Time `json:"create_time"`
+	ResourceType string    `json:"resource_type"`
+	EventType    string    `json:"event_type"`
+	Summary      string    `json:"summary"`
+	Resource     Resource  `json:"resource"`
+}
+
+type WxPayCallbackRsp struct {
+	Code    string `json:"code"` //FAIL, SUCCESS
+	Message Amount `json:"message"`
 }

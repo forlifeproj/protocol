@@ -11,17 +11,17 @@ const (
 
 // 登录请求
 type LoginReq struct {
-	Appid     int    `json:"appid"`
-	Token     string `json:"token"`
-	LoginType int    `json:"login_type"`
+	Appid     int    `json:"appid"`      //appid
+	Token     string `json:"token"`      //授权码
+	LoginType int    `json:"login_type"` //登录类型 WEIXIN_LOGIN_TYPE=1
 }
 
 type LoginRsp struct {
-	Code        int    `json:"errcode"`
-	ErrMsg      string `json:"errmsg"`
-	Ticket      string `json:"ticket"`
-	Openid      string `json:"openid"`
-	RegisterUid int64  `json:"uid"`
+	Code        int    `json:"errcode"` //错误码
+	ErrMsg      string `json:"errmsg"`  //错误信息
+	Ticket      string `json:"ticket"`  //登录票据
+	Openid      string `json:"openid"`  //账号openid
+	RegisterUid int64  `json:"uid"`     //uid
 }
 
 // 登录鉴权
