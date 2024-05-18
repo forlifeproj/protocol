@@ -1,4 +1,4 @@
-package wxpay
+package wx_pay
 
 import "time"
 
